@@ -1,0 +1,83 @@
+.featured{
+    flex: 2;
+    box-shadow: 3px 4px 14px 2px rgba(222,218,218,0.75);
+    -webkit-box-shadow: 3px 4px 14px 2px rgba(222,218,218,0.75);
+    -moz-box-shadow: 3px 4px 14px 2px rgba(222,218,218,0.75);
+  
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color:grey;
+        
+
+        .title{
+            font-size: 16px;
+
+        }
+    }
+
+    .bottom {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+
+
+        .featuredChart{
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .title{
+            font-weight: 500;
+            color: grey;
+        }
+
+        .amount{
+            font-size: 30px;
+
+        }
+
+        .desc{
+            font-weight: 300;
+            color: gray;
+            text-align: center;
+        }
+
+        .summary{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .item{
+                text-align: center;
+                .itemTitle{
+                    font-size: 14px;
+                    color: gray;
+                }
+
+                .itemResult{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    font-size: 14px;
+
+                    &.positive{
+                        color: rgb(0, 197, 0);
+
+                    }
+
+                    &.negative{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
