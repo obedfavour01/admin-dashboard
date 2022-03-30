@@ -5,6 +5,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Widgets from '../../Components/Widgets/Widgets'
 import './home.scss'
+import Tables from '../../Components/Table/Table'
 
 function Home() {
   return (
@@ -24,14 +25,15 @@ function Home() {
           <Featured/>
           <Chart/>
         </div>
-      </div>
 
-      <div className="listContainer">
+        <div className="listContainer">
         <div className="listTitle">
           Latest Transactions
         </div>
+          <Tables/>
       </div>
 
+      </div>
 
     </div>
    
