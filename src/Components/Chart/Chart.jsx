@@ -37,11 +37,11 @@ const data = [
   price: 1900
 }
 ];
-function Chart() {
+function Chart({aspect,title}) {
   return (
     <div className='chart'>  
-        <p className="title">Revenue Chart Last 6 Months</p>
-    <ResponsiveContainer width="100%" aspect = {2 / 1}>
+        <p className="title">{title}</p>
+    <ResponsiveContainer width="100%" aspect = {aspect}>
     <AreaChart width={730} height={250} data={data}
   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
   <defs>

@@ -40,7 +40,7 @@ function Navbar() {
               <ListOutlined/>
             </div>
             <div className="item">
-            <img src="./images/user.jpg" 
+            <img src="/images/user.jpg" 
             alt="" 
             className = 'avatar'/>
             </div>
