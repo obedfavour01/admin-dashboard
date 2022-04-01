@@ -5,15 +5,19 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NotificationsActive ,Logout,LocalShipping,Settings, InsertChart, ReceiptLong, AccountCircle} from '@mui/icons-material';
+import {Link} from 'react-router-dom'
 function Sidebar() {
   return (
     <div className='sidebar'>
 
 
-      <div className="top">
+      <div className="top" >
+
+        <Link to = '/' style= {{textDecoration: 'none'}}>
         <span className="logo">
           ObedBaby
         </span>
+        </Link>
       </div>
 
       <hr/>
@@ -27,12 +31,17 @@ function Sidebar() {
           <p className="title">LIST</p>
 
           <li>
+        <Link to = '/users' style= {{textDecoration: 'none'}}>
             <PersonOutlineIcon className = 'icon'/>
             <span>Users</span>
+            </Link>
           </li>
           <li>
+      <Link to = '/products' style= {{textDecoration: 'none'}}>
+            
             <Inventory2Icon className = 'icon'/>
             <span>Product</span>
+          </Link>
           </li>
           <li>
             <ShoppingCartIcon className = 'icon'/>
