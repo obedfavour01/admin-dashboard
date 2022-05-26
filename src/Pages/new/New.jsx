@@ -34,7 +34,7 @@ console.log(file)
       <div className="right">
         <form>
         <div className="formInput">
-            <label for="file"> Change Avi : <DriveFolderUploadOutlined className='icon'/> </label>
+            <label htmlFor="file"> Change Avi : <DriveFolderUploadOutlined className='icon'/> </label>
             <input type="file" id = 'file'
             accept = 'image/*'
              style = {{display: 'none',border: '2px solid black   '}}
@@ -44,7 +44,7 @@ console.log(file)
 
       {  inputs.map(input => (
           <div className="formInput" key = {input.id}>
-          <label for={input.id}>{input.label} :</label>
+          <label htmlFor={input.id}>{input.label} :</label>
           <input type={input.type} placeholder={input.placeholder} id = {input.id}/>
         </div>
         ))}

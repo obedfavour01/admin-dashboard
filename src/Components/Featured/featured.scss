@@ -4,6 +4,13 @@
     -webkit-box-shadow: 3px 4px 14px 2px rgba(222,218,218,0.75);
     -moz-box-shadow: 3px 4px 14px 2px rgba(222,218,218,0.75);
   border-radius: 10px;
+
+  @media screen and (max-width: 768px){
+
+    width: 400px;
+    height: 200px;
+      
+  }
     .top{
         display: flex;
         align-items: center;
@@ -25,7 +32,10 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
+        @media screen and (max-width: 768px){
 
+          gap: 0px;
+          }
 
 
         .featuredChart{
