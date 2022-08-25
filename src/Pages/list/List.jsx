@@ -5,6 +5,7 @@ import Sidebar from '../../Components/Sidebar/Sidebar'
 import './List.scss'
 
 function List() {
+
   return (
     <div className = 'list'>
 

@@ -8,9 +8,11 @@ import './home.scss'
 import Tables from '../../Components/Table/Table'
 
 function Home() {
+
+  
   return (
     <div className='home'>
-      <Sidebar/>
+      <Sidebar />
 
       <div className="homeContainer">
         <Navbar/>

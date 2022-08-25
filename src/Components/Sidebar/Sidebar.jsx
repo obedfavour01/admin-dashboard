@@ -7,11 +7,24 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NotificationsActive ,Logout,LocalShipping,Settings, InsertChart, ReceiptLong, AccountCircle} from '@mui/icons-material';
 import {Link} from 'react-router-dom'
 import { DarkModeContext } from '../../context/darkModeContext';
-function Sidebar() {
+function Sidebar({open,setOpen}) {
 
   const {dispatch} = useContext(DarkModeContext)
   return (
-    <div className='sidebar'>
+    <div className='sidebar'
+        
+        style = {
+          {display: open && 'block', 
+          position: open ? "absolute" : 'relative',
+          top: open && 0,
+          botton: open && 0,
+          zIndex : 5,
+          transition: "2s",
+          flex: open && 2
+           }}
+        >
+
+
 
 
       <div className="top" >
@@ -21,6 +34,8 @@ function Sidebar() {
           ObedBaby
         </span>
         </Link>
+
+        <button onClick={()=> setOpen(false)} className = 'btn-close'>X</button>
       </div>
 
       <hr/>
@@ -96,6 +111,7 @@ function Sidebar() {
 
       </div>
     </div>
+
   )
 }
 

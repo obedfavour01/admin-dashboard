@@ -1,6 +1,6 @@
 import Home from "./Pages/home/Home";
 import Login from "./Pages/login/Login";
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import List from "./Pages/list/List";
 import Single from "./Pages/single/Single";
@@ -20,12 +20,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="users">
-            <Route index element={<List />} />
+            <Route index element={<List/>}/>
             <Route path=":userId" element={<Single />} />
             <Route path="new" element={<New inputs = {userInputs} title = 'Add New User'/>} />
           </Route>
           <Route path="products">
-            <Route index element={<List />} />
+            <Route index element={<List/>} />
             <Route path=":productId" element={<Single />} />
             <Route path="new" element={<New inputs = {productInputs} title = 'Add new products'/>}/>
           </Route>

@@ -66,7 +66,9 @@ function Tables() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCells">Tracking Id</TableCell>
+            <TableCell className="tableCells">
+              Tracking Id
+            </TableCell>
             <TableCell  className="tableCells">
               Products
             </TableCell>

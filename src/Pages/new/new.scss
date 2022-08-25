@@ -14,6 +14,14 @@
             display: flex;
             margin: 20px;
 
+            .bottom{
+                 
+            @media screen and (max-width: 768px){
+               
+                    justify-content: space-between;
+                }
+            }
+
             h1{
                 color: lightgray;
                 font-size: 20px;
@@ -28,21 +36,37 @@
                     border-radius: 50%;
                     object-fit: cover;
                 }
+                @media screen and (max-width: 768px){
+                    flex:1
+                }
 
             }
 
             .right{
                 flex: 2;
-
+                
+ 
+                @media screen and (max-width: 768px){
+                    flex:3
+                }
                 form{
                     display: flex;
                     flex-wrap: wrap;
                     gap: 20px;
                     justify-content: space-around;
-
+ 
+                    @media screen and (max-width: 768px){
+                        flex-direction: column;
+                        align-items: center;
+                        
+                    }
                     .formInput{
                         width: 40%;
 
+                        @media screen and (max-width: 768px){
+                            width: 55%;
+                            
+                        }
                      
                             label{
                                 display: flex;

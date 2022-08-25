@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import "./Navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import {
@@ -12,11 +12,21 @@ import {
 import { DarkModeContext } from "../../context/darkModeContext";
 
 function Navbar() {
-  const { dispatch } = useContext(DarkModeContext);
+  const { dispatch } = useContext(DarkModeContext); 
+
+
+// const handleClick = () => {
+//   setOpen(true)
+// }
+
+//   console.log(open)
 
   return (
     <div className="navbar">
       <div className="wrapper">
+        {
+        <button className="btn-toggle"> click</button>
+        }
         <div className="search">
           <input type="text" placeholder="Search" />
           <SearchOutlinedIcon />

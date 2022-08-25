@@ -33,7 +33,7 @@ console.log(file)
       </div>
       <div className="right">
         <form>
-        <div className="formInput">
+         <div className="formInput">
             <label htmlFor="file"> Change Avi : <DriveFolderUploadOutlined className='icon'/> </label>
             <input type="file" id = 'file'
             accept = 'image/*'
@@ -42,13 +42,14 @@ console.log(file)
             
           </div>
 
-      {  inputs.map(input => (
-          <div className="formInput" key = {input.id}>
-          <label htmlFor={input.id}>{input.label} :</label>
-          <input type={input.type} placeholder={input.placeholder} id = {input.id}/>
-        </div>
-        ))}
-           
+          {  inputs.map(input => (
+              <div className="formInput" key = {input.id}>
+              <label htmlFor={input.id}>{input.label} :</label>
+              <input type={input.type} placeholder={input.placeholder} id = {input.id}/>
+            </div>
+            ))
+          }
+              
      
 
           <button>Send</button>
