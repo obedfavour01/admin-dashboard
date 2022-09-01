@@ -6,20 +6,17 @@ import {
   DarkModeOutlined,
   FullscreenExitOutlined,
   LanguageOutlined,
+  LightModeOutlined,
   ListOutlined,
   NotificationsNoneOutlined,
 } from "@mui/icons-material";
 import { DarkModeContext } from "../../context/darkModeContext";
 
 function Navbar() {
-  const { dispatch } = useContext(DarkModeContext); 
+  const { dispatch } = useContext(DarkModeContext);
 
+    const {darkMode} = useContext(DarkModeContext);
 
-// const handleClick = () => {
-//   setOpen(true)
-// }
-
-//   console.log(open)
 
   return (
     <div className="navbar">
@@ -36,11 +33,11 @@ function Navbar() {
             <LanguageOutlined />
           </div>
 
-          <div className="item">
-            <DarkModeOutlined
-              onClick={() => dispatch({ type: "TOGGLE" })}
-              style={{cursor: 'pointer'}}
-            />
+          <div className="item" 
+           onClick={() => dispatch({ type: "TOGGLE" })}
+           style={{cursor: 'pointer'}}>
+
+            {!darkMode ? <DarkModeOutlined/> :<LightModeOutlined/>}
           </div>
 
           <div className="item">

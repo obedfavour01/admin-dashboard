@@ -11,18 +11,7 @@ function Sidebar({open,setOpen}) {
 
   const {dispatch} = useContext(DarkModeContext)
   return (
-    <div className='sidebar'
-        
-        style = {
-          {display: open && 'block', 
-          position: open ? "absolute" : 'relative',
-          top: open && 0,
-          botton: open && 0,
-          zIndex : 5,
-          transition: "2s",
-          flex: open && 2
-           }}
-        >
+    <div className='sidebar'>
 
 
 
