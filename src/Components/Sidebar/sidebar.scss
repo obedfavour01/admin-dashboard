@@ -8,19 +8,34 @@
     
     @media screen and (max-width: 768px){
         display:none;
-        
+        width: 50%;
     }
+
+  
     .top{
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-    
+        @media screen and (max-width: 768px){
+            display: flex;
+            // gap: 25px;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 20px;
+
+            
+        }
 
         .logo{
             font-size: 20px;
             font-weight: bold;
             color:#8884d8;
+
+            @media screen and (max-width: 768px){
+                font-size: 14px;
+            }
         }
 
         .btn-close{
@@ -28,8 +43,9 @@
 
             
     @media screen and (max-width: 768px){
-        display:inline-block;
-        
+        display: inline-block;
+        width: 30px;
+        height: 30px;
     }
         }
     }
@@ -102,5 +118,27 @@
                 border: 1px solid black;
         }
         }
+    }
+}
+
+.sidebar.responsive {
+    position: absolute;
+    min-height: 100vh;
+    width: 40%;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 10;
+    transition : display 1s;
+    opacity:1;
+
+    @media screen and (max-width: 768px){
+        width: 40%;
+    }
+    @media screen and (min-width: 768px){
+        flex:1;
+        border-right: 0.3px solid rgb(233, 230, 230);
+        min-height: 100vh;
+        background-color: white;
     }
 }

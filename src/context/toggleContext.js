@@ -1,10 +1,20 @@
-import { createContext} from "react";
+import { createContext, useState} from "react";
 
-const INITIAL_STATE = {
-    open : false
+
+export const ToggleContext = createContext()
+
+
+export const ToggleProvider = ({children}) => {
+    const [open,setOpen] = useState(false)
+
+
+    return (
+        <ToggleContext.Provider value = {{open,setOpen}}>
+                {children}
+        </ToggleContext.Provider>
+    )
 }
- 
-const ToggleContext = createContext(INITIAL_STATE)
+
 
 
 

@@ -7,7 +7,9 @@
 
     @media screen and (max-width : 768px){
         width: 100vw;
-        padding: 20px;
+        padding: 10px;
+        justify-content: center;
+   
     }
 
     .widgets,
@@ -15,6 +17,13 @@
       display: flex;
       gap: 20px;
       margin: 20px;
+
+      
+    @media screen and (max-width : 768px){
+      margin-top: 20px;
+      
+  }
+
     }
 
     .widgets {
@@ -27,6 +36,7 @@
       }
     }
 
+
     .charts {
       padding: 5px 20px;
 
@@ -35,7 +45,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        max-width: 80%;
+        padding: 5px 0px;
+        // margin-left: 20px;
       
       }
     }

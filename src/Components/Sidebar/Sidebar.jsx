@@ -1,30 +1,39 @@
 import React,{useContext} from 'react'
 import  './sidebar.scss'
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import MenuIcon from '@mui/icons-material/Menu';
+
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NotificationsActive ,Logout,LocalShipping,Settings, InsertChart, ReceiptLong, AccountCircle} from '@mui/icons-material';
 import {Link} from 'react-router-dom'
 import { DarkModeContext } from '../../context/darkModeContext';
-function Sidebar({open,setOpen}) {
+import { ToggleContext } from '../../context/toggleContext';
+function Sidebar() {
 
   const {dispatch} = useContext(DarkModeContext)
+  const {open,setOpen} = useContext(ToggleContext)
+
+
+  const handleClose = () => {
+    setOpen(false)
+  }
   return (
-    <div className='sidebar'>
-
-
-
+    <div className = {open ? 'sidebar responsive' : 'sidebar'}>
 
       <div className="top" >
 
+        <div className = 'btn-close' onClick = {handleClose}>
+          <MenuIcon style={{width: "100%", height: "100%"}}/>
+        </div>
+        
         <Link to = '/' style= {{textDecoration: 'none'}}>
-        <span className="logo">
+        <span className= 'logo'>
           ObedBaby
         </span>
         </Link>
 
-        <button onClick={()=> setOpen(false)} className = 'btn-close'>X</button>
       </div>
 
       <hr/>

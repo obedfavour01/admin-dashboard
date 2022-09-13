@@ -8,12 +8,17 @@ import New from "./Pages/new/New";
 import {userInputs,productInputs} from './formSource'
 import './style/dark.scss'
 import { DarkModeContext } from "./context/darkModeContext";
+import { ToggleContext } from "./context/toggleContext";
 
 function App() {
 
   const {darkMode} = useContext(DarkModeContext)
+  const {open,setOpen} = useContext(ToggleContext)
   return(
 <div className = {darkMode ? 'app dark' : 'app'}>
+  
+
+
     <BrowserRouter>  
       <Routes>
         <Route path="/">
@@ -32,6 +37,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+
   </div>
   );
 }
