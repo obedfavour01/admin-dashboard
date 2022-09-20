@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext, useEffect} from 'react'
 import  './sidebar.scss'
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -7,20 +7,38 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NotificationsActive ,Logout,LocalShipping,Settings, InsertChart, ReceiptLong, AccountCircle} from '@mui/icons-material';
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import { DarkModeContext } from '../../context/darkModeContext';
 import { ToggleContext } from '../../context/toggleContext';
+import { useState } from 'react';
 function Sidebar() {
 
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const {dispatch} = useContext(DarkModeContext)
   const {open,setOpen} = useContext(ToggleContext)
-
+  const pathName = useLocation().pathname;
 
   const handleClose = () => {
     setOpen(false)
   }
-  return (
-    <div className = {open ? 'sidebar responsive' : 'sidebar'}>
+
+  useEffect(() => {
+   
+    setOpen(false)
+  }, [pathName, setOpen,])
+
+
+  useEffect(() =>{
+      window.addEventListener('resize', () => {
+        setScreenWidth(window.innerWidth)
+          if(screenWidth > 768){
+            setOpen(false)
+          }
+      })  
+  },[screenWidth])
+  return ( 
+    <div className = {open  ? 'sidebar responsive' : 'sidebar'}>
 
       <div className="top" >
 
@@ -41,8 +59,12 @@ function Sidebar() {
         <ul>
           <p className="title">MAIN</p>
           <li>
+
+        <Link to = '/' style= {{textDecoration: 'none'}}>
+            
            <DashboardIcon className = 'icon'/>
             <span>Dashboard</span>
+        </Link>
           </li>
           <p className="title">LIST</p>
 

@@ -9,13 +9,16 @@ import {userInputs,productInputs} from './formSource'
 import './style/dark.scss'
 import { DarkModeContext } from "./context/darkModeContext";
 import { ToggleContext } from "./context/toggleContext";
+import { NoEncryption } from "@mui/icons-material";
 
 function App() {
 
   const {darkMode} = useContext(DarkModeContext)
   const {open,setOpen} = useContext(ToggleContext)
+
+
   return(
-<div className = {darkMode ? 'app dark' : 'app'}>
+<div className = {darkMode ? 'app dark' : 'app'} style = {{overflowY : open && 'hidden' ,  height : open && '100vh'}}>
   
 
 

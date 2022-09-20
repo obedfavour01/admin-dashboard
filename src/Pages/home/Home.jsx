@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Featured from '../../Components/Featured/Featured'
 import Chart from '../../Components/Chart/Chart'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -6,12 +6,15 @@ import Sidebar from '../../Components/Sidebar/Sidebar'
 import Widgets from '../../Components/Widgets/Widgets'
 import './home.scss'
 import Tables from '../../Components/Table/Table'
+import { ToggleContext } from '../../context/toggleContext'
 
 function Home() {
 
+  const {open,setOpen} = useContext(ToggleContext)
   
   return (
     <div className='home'>
+
       <Sidebar />
 
       <div className="homeContainer">
